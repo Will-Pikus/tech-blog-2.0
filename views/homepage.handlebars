@@ -1,0 +1,22 @@
+<!-- Loop over each object in the projects array -->
+{{#each posts as |post| }}
+<div class="post-box">
+  <div class="post-header">
+    <h2 class="post-title">
+      <a href="/post/{{post.id}}">{{post.title}}</a>
+    </h2>
+    <p class="post-cb">Created by {{post.user.name}} on {{format_date post.date_created}}</p>
+  </div>
+  <div class="post-content text-center">
+    <p>
+      {{post.content}}
+    </p>
+  </div>
+
+  <div class="post-comment text-center">
+      <p>
+      {{comments.content}}
+    </p>
+  </div>
+</div>
+{{/each}}
