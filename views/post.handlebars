@@ -1,23 +1,17 @@
 <div class="text-center">
-  <h2>{{title}}</h2>
-  <p>{{{content}}}</p>
-  <p>Created by {{user.name}} on {{format_date date_created}}</p>
-  {{!-- <p>
-    <span for="img" aria-label="money">💲</span>
-    <span class="dollar-amount">{{format_amount needed_funding}}</span>
-    needed
-  </p>
-  <p>
-    <button class="btn btn-primary">Fund this Project!</button>
-  </p> --}}
-  <div class="post-comment new-comment-form text-center">
-    <div class="">
-        <textarea class="form-input" id="post-comment" name="post-comment"></textarea>
-    </div>
-    <div class="">
-        <button type="submit" class="comm-btn btn-primary">Comment</button>
-    </div>
+  <h2>{{this.name}}</h2>
+  <p>{{this.contents}}</p>
+  <p>Created by {{this.username}} on {{format_date this.date_created}}</p>
+  
+<form class="comment-form">
+  <div>
+    <textarea data-id="post_{{this.id}}" class="ml-5 text-area" name="comment-text"></textarea>
   </div>
-</div>
 
-<script src="./js/comment.js"></script>
+  <div>
+    <button class="button comm-btn" type="submit">Post comment</button>
+  </div>
+</form>
+
+<script src="/js/comments.js"></script>
+</div>

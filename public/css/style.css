@@ -1,7 +1,7 @@
 header, .project:not(:last-child) {
     border-bottom: 1px solid #ccc;
   }
-  
+
   .no-button {
     background: none;
     border: none;
@@ -47,6 +47,11 @@ header, .project:not(:last-child) {
     padding: 15px;
   }
 
+  .text-area{
+    width: 30%;
+    height: 100px;
+  }
+
   .comm-btn{
     background-color: #37a5d8;
     color: white;
@@ -54,4 +59,5 @@ header, .project:not(:last-child) {
     padding: 10px;
     border-radius: 10px 10px 10px 10px;
     margin-left: 5px;
+    margin-top: 10px;
   }
